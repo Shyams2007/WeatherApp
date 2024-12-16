@@ -1,0 +1,40 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+	
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" href=
+"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+
+<body>
+    
+	<div id="weather-info"
+				class="animate__animated animate__fadeIn">
+	<h1>Weather in {{ weather.city }}</h1>
+    <h2>Temperature: {{ weather.temperature }} °C degrees</h2>
+    <p>Condition: {{ weather.description }}</p>
+	<p>Wind Speed: {{ weather.WindSpeed }} Miles per Hour</p>
+	<p>Date : {{ weather.date }}</p>
+	<p><b>Holiday Tips: {{weather.holiday_message}}</b></p>
+	
+	<img src="{{weather.icon_url}}" alt="Weather Icon">
+	<p></p>
+    <a href="/">Search Again</a>
+    <a href="{{ url_for('history') }}">View Search History</a>
+	</div>
+
+	<script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+	</script>
+	<script src=
+"https://momentjs.com/downloads/moment.min.js">
+	</script>
+</body>
+</html>
