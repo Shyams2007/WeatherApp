@@ -14,7 +14,7 @@ app.config['MYSQL_DB'] = 'mydatabase'
 mysql = MySQL(app)
 
 # Initialize WeatherService with OpenWeatherMap API key
-weather_service = WeatherService(api_key='0e6f80e1365e5ae2ca3d2bb8daf37254')
+weather_service = WeatherService(api_key='Your_Key')
 
 @app.route('/')
 @app.route('/home', methods =['GET', 'POST'])
