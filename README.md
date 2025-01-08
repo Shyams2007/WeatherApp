@@ -34,14 +34,12 @@ Open a new terminal, and make sure you have navigated to the 'WeatherApp' folder
 
 Setting up a virtual environment (optional but advisable) (You can replace env with any name, though venv will be used in the instructions})
 
-For macOS/linux users, Run the following commands:
-
-python3 -m venv env
-source env/bin/activate
-
-For Windows users using Powershell, Run the following commands:
-. python -m venv env
-. env\Scripts\Activate.ps1 
-For Windows users using Command Prompt, Run the following commands:
-python -m venv env
-env\Scripts\Activate.bat
+or _macOS/linux users_, Run the following commands:
+   -   python3 -m venv env 
+   -   source env/bin/activate\
+For _Windows users using Powershell_, Run the following commands:
+   -   python -m venv env 
+   -   env\Scripts\Activate.ps1
+For _Windows users using Command Prompt_, Run the following commands:
+   -   python -m venv env
+   -   env\Scripts\Activate.bat
