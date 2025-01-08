@@ -18,6 +18,7 @@ Download Python:
 
 Visit the official Python website: https://www.python.org/downloads/
 Download the appropriate installer for your operating system (Windows, macOS, or Linux).
+
 **Run the Installer:**
 
 During installation, ensure you check the box that says "Add Python to PATH".
@@ -27,3 +28,17 @@ Verify Installation:
 **Open a terminal or command prompt.**
 Type: python --version or python3 --version
 You should see the Python version displayed.
+
+Open a new terminal, and make sure you have navigated to the 'WeatherApp' folder
+
+Setting up a virtual environment (optional but advisable) (You can replace env with any name, though venv will be used in the instructions})
+
+For macOS/linux users, Run the following commands:
+
+python3 -m venv env
+source env/bin/activate
+For Windows users using Powershell, Run the following commands:
+python -m venv env
+env\Scripts\Activate.ps1 For Windows users using Command Prompt, Run the following commands:
+python -m venv env
+env\Scripts\Activate.bat
