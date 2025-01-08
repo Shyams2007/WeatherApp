@@ -26,6 +26,7 @@ Choose the default settings or customize the installation (e.g., select a specif
 Verify Installation:
 
 **Open a terminal or command prompt.**
+
 Type: python --version or python3 --version
 You should see the Python version displayed.
 
@@ -37,8 +38,8 @@ For macOS/linux users, Run the following commands:
 
 python3 -m venv env
 source env/bin/activate
+
 For Windows users using Powershell, Run the following commands:
+
 python -m venv env
-env\Scripts\Activate.ps1 For Windows users using Command Prompt, Run the following commands:
-python -m venv env
-env\Scripts\Activate.bat
+env\Scripts\Activate.ps1 
