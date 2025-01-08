@@ -8,4 +8,22 @@ This module uses the "https://api.openweathermap.org/data/2.5/weather" to get th
 To clone my project into Visual Studio Code using source control:
 
 Navigate to Source Control on the left toolbar, click on "Clone Repository"
+Enter in the URL of this repo to download https://github.com/Shyams2007/WeatherApp
 
+
+**Ensure you have Python on your system**
+
+**Step 1: Install Python**
+Download Python:
+
+Visit the official Python website: https://www.python.org/downloads/
+Download the appropriate installer for your operating system (Windows, macOS, or Linux).
+**Run the Installer:**
+
+During installation, ensure you check the box that says "Add Python to PATH".
+Choose the default settings or customize the installation (e.g., select a specific directory or install additional tools like pip).
+Verify Installation:
+
+**Open a terminal or command prompt.**
+Type: python --version or python3 --version
+You should see the Python version displayed.
