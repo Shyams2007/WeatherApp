@@ -40,6 +40,8 @@ python3 -m venv env
 source env/bin/activate
 
 For Windows users using Powershell, Run the following commands:
-
+. python -m venv env
+. env\Scripts\Activate.ps1 
+For Windows users using Command Prompt, Run the following commands:
 python -m venv env
-env\Scripts\Activate.ps1 
+env\Scripts\Activate.bat
