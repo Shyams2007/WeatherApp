@@ -1,4 +1,4 @@
-# WeatherApp
+# WeatherApp (IN PROGRESS .....)
 I have developed an weather fetch project to see the current weather of a city. The app displays the weather for the current city and gives suggestions for holiday option for that place.
 
 This module uses the "https://api.openweathermap.org/data/2.5/weather" to get the weather data.
