@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Login </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='resources/style.css') }}">
+             
+    </head>
+    <body class="body">
+      <div class="header">
+        <p>Welcome to WatherApp by Shyam, please Login with your google Id</p>
+        <p>When logged in you can see your previous search history</p>
+     </div></br></br></br>
+        <div align="center">
+             
+            
+                <form >
+                  <div class="weather-card">
+                    <h2>Login</h2>
+                    <h3>Please login to continue</h3> 
+                    <a href="{{ url_for('login') }}">
+                      <button type="button" class="login-with-google-btn" >
+                        Sign in with Google
+                      </button>
+                                               
+                  </form>
+                
+            <!--p class="bottom">Don't have an account?  <a class="bottom" href="{{url_for('register')}}"> Sign Up here</a></p-->
+          </div>
+        </div>
+    </body>
+</html>

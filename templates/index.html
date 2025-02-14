@@ -1,33 +1,39 @@
 
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='resources/style.css') }}">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css">
     <title>Weather App</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href=
-"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-	<link rel="stylesheet" href=
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-	<link rel="stylesheet" href=
-"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CSS -->
+    
 </head>
 <body>
-    
-    <form autocomplete="off" action="/weather" method="post">
-        <div class="container">
+    <div class="header">
+            
+        Hi {{username}}!! &nbsp; &nbsp; 
+            <a href="{{ url_for('logout') }}" >Logout</a>
+      </div><br><br>
+    <form action="/weather" method="post">
+        
+        <div align="center">
             <div class="weather-card">
                 <h1 style="color: green;">
-                    Shyam's
-                </h1>
-                <h3>
                     Weather App
-                </h3>                    
-            <div class="autocomplete" >
-                <input type="text" name="city" placeholder="Enter city name" required>
-                <i class="fas fa-search" onclick="submit"></i>
-                <button type="submit">Get Weather</button>
-            </div>
+                </h1>
+                                  
+                <!--p>{{ msg }}</p-->
+                <label for="city">Enter City Name:</label>
+                <input type="text" id="city" name="city" placeholder=" " autocomplete="off" required>
+                <div id="autocomplete-list">                
+                </div> <br><br>
+                <button type="submit" id="submit_button">Get Weather</button>
+                <div id="error_message" class="error-message"></div>
+                <div id="loading_spinner" class="spinner"></div>
+            
             </div>
             <p><em><a href="{{ url_for('history') }}">View Search History</a></em></p>
             {% if error %}
@@ -37,12 +43,10 @@
         </div>
        <!--input type="text" name="city" placeholder="Enter city name" required>
         <button type="submit">Get Weather</button-->
-    </form>
-    
-    <div>
-    
+            <script type="text/javascript" src="{{ url_for('static', filename='resources/scripts.js')}}"></script>
+    </form>    
+    <div>    
 </div>
-<script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDANjx3bosEtIyzJaoWs50Wnt6nt_1rmxU "></script>
+<script type="text/javascript" src="{{ url_for('static', filename='autocomplete.js')}}"></script>
 </body>
 </html>

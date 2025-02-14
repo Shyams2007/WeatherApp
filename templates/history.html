@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Search History</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='resources/style.css') }}">
 </head>
 <body>
 <script>
@@ -105,10 +107,12 @@ for (let i = 1; i < rows.length; i++) {
 }
 }
 </script>
-<div id="weather-info"
-				class="animate__animated animate__fadeIn">
-    <h1>Search History</h1>
-    <input type="text" id="filterInput" onkeyup="filterTable()" placeholder="Filter for City names..">
+<div class="header">			
+  <p>Past Search History</p>    
+</div><br></br>
+<div align="center">
+  
+  <input type="text" id="filterInput" onkeyup="filterTable()" placeholder="Filter for City names..">
     <p></p>
     <table id="my-table">
         <tr>
@@ -120,8 +124,9 @@ for (let i = 1; i < rows.length; i++) {
         {% for search in searches %}
         <tr>
             <td>{{ search[0] }}</td>
-            <td>{{ search[1] }}</td>
-            <td>{{ search[2] }}</td>
+            <td>{{ search[1] }} </td>
+            <td>{{ search[2] }}<img class="forecast-icons"
+              src="{{ url_for('static', filename='icons/' + search[2] + '.svg') }}"</td>
             <td>{{ search[3] }}</td>
         </tr>
         {% endfor %}
@@ -130,7 +135,8 @@ for (let i = 1; i < rows.length; i++) {
     <button id="prevButton">Previous</button> 
     <button id="nextButton">Next</button> 
     <p></p>
-    <a href="/">Back to Home</a>
+    <a href="{{ url_for('login') }}">Back to Home</a>
+    <!--a href="/">Back to Home</a-->
 </div>
 </body>
 </html>
